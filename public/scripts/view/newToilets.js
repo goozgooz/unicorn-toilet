@@ -12,7 +12,7 @@ newToilet.handleForm = function(){
 
 newToilet.submit = function(event) {
   event.preventDefault();
-  let toilet = {
+  let toilet = new app.Toilet {
     location: $('#location').val(),
     overallQuality: $('input[name=toilet]:checked', '#new-toilet').val(),
     tpQuality: $('input[name=tp]:checked', '#new-toilet').val(),
@@ -24,6 +24,8 @@ newToilet.submit = function(event) {
     comments: $('#comments').val(),
   }
   console.log(toilet);
+
+  toilet.insertRecord();
 }
 
 

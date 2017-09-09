@@ -38,5 +38,10 @@ var app = app || {};
       });
   };
 
+  Toilet.prototype.insertRecord = function() {
+    $.post('/toilets', {location: this.location, usage: this.usage, occupancy: this.occupancy, genderNeutral: this.genderNeutral, soap: this.soap, drying: this.drying, overallQuality: this.overallQuality, tpQuality: this.tpQuality, comments: this.comments})
+    .then(console.log);
+  };
+
   module.Toilet = Toilet;
 })(app);
