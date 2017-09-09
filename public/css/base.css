@@ -1,0 +1,60 @@
+.title {
+  font-family: fantasy;
+  text-align: center;
+}
+h2{
+  color: black;
+  font-weight: bold;
+  font-family: 'Delius Unicase', cursive;
+}
+h5{
+  color: #A874D4;
+  font-family: 'Delius Unicase', cursive;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+h6 {
+  margin:bottom: 2px;
+}
+
+.footer h3 {
+  font-size: 9px;
+}
+
+
+#logo:hover {
+	-webkit-filter: drop-shadow(0px 0px 8px rgba(0, 231, 255, 0.8));
+}
+
+.nav-buttons:hover {
+  -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 231, 255, 0.8));
+}
+
+#D {
+  background-color: #A874D4;
+}
+
+#A {
+  background-color: #ED7DC0;
+  color: white;
+}
+
+#R{
+  background-color: #A874D4;
+}
+
+#N{
+  background-color: #ED7DC0;
+  color: white;
+}
+
+.nav-links a {
+  padding: 10px;
+  text-decoration: none;
+  color: #FF988E;
+  font-weight: bold;
+}
+#active-link {
+  color: #A874D4;
+}
