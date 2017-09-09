@@ -39,26 +39,6 @@ body {
   float: right;
   margin-right: 100px;
 }
-
-/*Footer Stuff*/
-.footer {
-  font-family: 'Delius Unicase', cursive;
-  text-align: center;
-  letter-spacing: .5px;
-  color: grey;
-}
-
-#unicorn {
-  margin-bottom: 10px;
-  color: #A874D4;
-  font-weight: bold;
-}
-
-.footer hr {
-  width: 100%;
-  margin-bottom: 15px;
-}
-
 .title {
   text-align: center;
   font-family: fantasy;
@@ -85,87 +65,57 @@ body {
   height: 500px;
 }
 /* About us page divs */
-.about-us{
-  width: 960px;
-  height: 300px;
-  margin-top:;
-  display: inline-block;
-}
 
-.our-pictures{
-  width: 220px;
-  height: 300px;
-  overflow: hidden;
-}
-/*Named each div that contains pictures differently to make it easier to style since we wanted out picture layout to alternate sides as we went down the page*/
-.L-card-container {
-  width: 220px;
-  height: 100%;
-  margin-left: 10px;
-  margin-right: 10px;
-  perspective: 600;
-  position: relative;
-  display: inline;
-  float: left;
-
-}
-
-.R-card-container {
-  height: 100%;
-  perspective: 600;
-  position: relative;
-  width: 220px;
-  display: inline;
-  float: right;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-/*this div holds the actual pictures that will flip and this css tells this div what to do when and what to do with each side of itself*/
-.card {
-  height: 100%;
-  width: 100%;
-  float: left;
-  position: absolute;
-  transform-style: preserve-3d;
-  transition: all 1s ease-in-out;
-}
-
-.card:hover {
-  transform: rotateY(180deg);
-}
-.card .side {
-  backface-visibility: hidden;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-}
-.card .back {
-  transform: rotateY(180deg);
-}
-
-/*this is the div that holds the actual text about us*/
-
-.what-about-us {
-  width: 600px;
-  position: relative;
-  text-align: block;
-  display: inline-block;
-  border: 50px;
+.aboutUsAll{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
   padding: 30px;
-  font-family: open-sans;
-  letter-spacing: 1px;
-  line-height: 25px;
+}
+.about-us{
+  width: 90%;
+  height:auto;
+  margin-top:50px;
+  display: inline-block;
+  word-wrap: break-word;
+  background-color: #A874D4;
+  color:white;
+}
+.about-us p{
+  width: 70%;
+  float: right;
+  margin-right: 10px;
+}
+/*Footer Stuff*/
+.footer {
+  font-family: 'Delius Unicase', cursive;
+  text-align: center;
+  letter-spacing: .5px;
+  color: grey;
 }
 
-#mama-d{
-  background-color: #A874D4;
-  color: white;
+#unicorn {
+  margin-bottom: 10px;
+  color: #A874D4;
+  font-weight: bold;
 }
+
+.footer hr {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
 @media screen and (max-width: 500px) {
   #nav-logo {
    margin-left: 50px;
   }
   .nav-links {
     margin-right: 50px;
+  }
+}
+@media screen and (max-width: 825px) {
+  .about-us{
+    width:50%;
   }
 }
