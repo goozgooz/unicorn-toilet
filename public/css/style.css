@@ -1,13 +1,3 @@
-/*body {
-  background-image: url("images/UNICORN-LOGO.jpg");
-  background-repeat: no-repeat;
-  position: relative;
-  background-position: center,bottom;
-  background-size: contain;
-  background-attachment: fixed;
-  background-color: rgba(0.5);
-}*/
-
 
 body {
   width:100%;
@@ -32,7 +22,7 @@ body {
 
 #nav-logo {
  width: 60px;
- margin-left: 75px;
+ margin-left: 100px;
  float: left;
 }
 
@@ -74,7 +64,6 @@ body {
 
 /*Footer Stuff*/
 .footer {
-  margin-top: 70px;
   font-family: 'Delius Unicase', cursive;
   text-align: center;
   letter-spacing: .5px;
@@ -97,12 +86,6 @@ body {
 }
 
 
-#footer {
-  margin-top: 700px;
-  font-family: times;
-}
-
-
 .title {
   text-align: center;
   font-family: fantasy;
@@ -111,13 +94,28 @@ body {
   text-align: center;
   margin: 0 auto;
   width: 70%;
+  height: auto;
 }
 /*Toilets page with all of our locations*/
 #map {
-  height: 500px;
-  margin-top: 100px;
+  height:500px;
+  width: auto;
   text-align: center;
+  /*float: right;*/
+  margin-bottom: 50px;
+  margin: 0 auto;
+}
+.sideBar {
+  background-color:#F5F7FA;
+  opacity:1;
+  width: 30%;
+  height: 500px;
+}
 
+h2{
+  color: black;
+  font-weight: bold;
+  font-family: 'Delius Unicase', cursive;
 }
 
 h5 {
@@ -233,14 +231,6 @@ h6 {
   font-family: fantasy;
   text-align: center;
 }
-
-#footer {
-  margin-top: 700px;
-  font-family: times;
-}
-
-
-
 
 
 h5 {
