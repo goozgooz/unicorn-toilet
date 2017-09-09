@@ -77,7 +77,7 @@ body {
 }
 
 .footer hr {
-  width: 720px;
+  width: 100%;
   margin-bottom: 15px;
 }
 
@@ -233,7 +233,7 @@ h6 {
 }
 
 
-h5 {
+h5{
   color: #A874D4;
   font-family: 'Delius Unicase', cursive;
   font-weight: bold;

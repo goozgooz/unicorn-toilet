@@ -1,0 +1,8 @@
+@media screen and (max-width: 500px) {
+  #nav-logo {
+   margin-left: 50px;
+  }
+  .nav-links {
+    margin-right: 50px;
+  }
+}
