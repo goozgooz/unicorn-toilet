@@ -1,12 +1,14 @@
 'use strict';
 $( document ).ready(function() {
-  $('.about-us').hide();
+  $('.aboutUsAll').hide();
 });
 $('#aboutLink').on('click',function(){
-  $('.about-us').fadeIn();
+  $('.aboutUsAll').fadeIn();
   $('#map').hide();
+  $('.footer').hide();
 })
 $('#homeLink').on('click',function(){
   $('#map').show();
-    $('.about-us').fadeOut();
+    $('.aboutUsAll').fadeOut();
+    $('.footer').show();
 })
