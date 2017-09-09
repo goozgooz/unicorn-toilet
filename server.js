@@ -58,4 +58,49 @@ function loadDB(){
   .catch(console.error);
 }
 
+app.post('/toilets', function(request, response){
+  client.query(
+    'INSERT INTO toilets(location, occupancy, soap, drying, genderNeutral, usage) VALUES($1, $2, $3, $4, $5, $6) ON CONFLICT DO NOTHING',
+    [
+      request.body.location,
+      request.body.occupancy,
+      request.body.soap,
+      request.body.drying,
+      request.body.genderNeutral,
+      request.body.usage
+    ],
+    function(err) {
+      if(err) console.error(err);
+      response.send('insert complete');
+      queryTwo();
+    }
+
+  function queryTwo() {
+    client.query(
+      'SELECT toilet_id FROM toilets WHERE location=$1',
+      [request.body.location],
+      function(err, result) {
+        if(err) console.error(err);
+        queryThree(result.rows[0].toilet_id)
+    });
+  }
+
+  function queryThree(toilet_id) {
+    client.query(
+      'INSERT INTO reviews(toilet_id, overallQuality, tpQuality, comments) VALUES($1, $2, $3, $4)'
+      [
+        toilet_id,
+        request.body.overallQuality,
+        request.body.tpQuality,
+        request.body.comments
+      ],
+      function(err) {
+        if(err) console.error(err);
+        response.send('insert complete');
+    );
+  };
+
+  )
+});
+
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
