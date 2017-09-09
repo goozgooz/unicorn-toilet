@@ -10,8 +10,9 @@
 
 
 body {
-  width: 960px;
+  width:100%;
   height: auto;
+  text-align: center;
   margin: auto;
   /*border: 2px solid black;*/
 }
@@ -19,13 +20,14 @@ body {
 /*Header Stuff*/
 
 .navbar {
-  width: 960px;
+  width:100%;
   position: fixed;
   top: 0;
   z-index: 10;
   background-color: white;
   font-family: 'Delius Unicase', cursive;
   font-size: .8em;
+  margin: 0 auto;
 }
 
 #nav-logo {
@@ -53,9 +55,9 @@ body {
 .nav-links {
   margin-top: 15px;
   position: relative;
-  left: 475px;
   top: 10px;
-  float: left;
+  float: right;
+  margin-right: 100px;
 }
 
 .nav-links a {
@@ -98,7 +100,6 @@ body {
 #footer {
   margin-top: 700px;
   font-family: times;
-  border: 2px solid black;
 }
 
 
@@ -106,13 +107,17 @@ body {
   text-align: center;
   font-family: fantasy;
 }
-
+.mainContent{
+  text-align: center;
+  margin: 0 auto;
+  width: 70%;
+}
 /*Toilets page with all of our locations*/
 #map {
-  width: 740px;
   height: 500px;
-  margin: 0 auto;
   margin-top: 100px;
+  text-align: center;
+
 }
 
 h5 {
@@ -232,7 +237,6 @@ h6 {
 #footer {
   margin-top: 700px;
   font-family: times;
-  border: 2px solid black;
 }
 
 
