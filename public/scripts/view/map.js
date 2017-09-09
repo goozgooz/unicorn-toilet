@@ -1,7 +1,6 @@
 var map;
 var chicago = {lat: 41.85, lng: -87.65};
 
-<<<<<<< HEAD
 /**
  * The CenterControl adds a control to the map that recenters the map on
  * Chicago.
@@ -40,9 +39,7 @@ function CenterControl(controlDiv, map) {
 
 }
 
-=======
 //initializing google map
->>>>>>> 2552bf9406f0ddf166a1ee0efef73f9de223f439
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 12,
