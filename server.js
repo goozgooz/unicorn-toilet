@@ -16,4 +16,46 @@ client.on('error', err => console.log(err));
 // app.use(bodyParser.json());
 app.use(express.static("./public"));
 
+app.get('/toilets', (req, res) => {
+  client.query(`
+    SELECT * FROM toilets
+    INNER JOIN reviews
+      ON toilets.toilet_id = reviews.toilet_id;
+    `)
+    .then(result => response.send(result.rows))
+    .catch(console.error);
+});
+
+loadDB();
+
+
+//Database loader
+function loadDB(){
+  client.query(`
+    CREATE TABLE IF NOT EXISTS
+    toilets(
+      toilet_id SERIAL PRIMARY KEY,
+      location VARCHAR(30),
+      occupancy INTEGER,
+      soap VARCHAR(5),
+      drying VARCHAR(10),
+      genderNeutral VARCHAR(5),
+      usage VARCHAR(5)
+    )
+  `)
+  .catch(console.error);
+
+  client.query(`
+    CREATE TABLE IF NOT EXISTS
+    reviews(
+      review_id SERIAL PRIMARY KEY,
+      toilet_id INTEGER NOT NULL REFERENCES toilets(toilet_id),
+      overallQuality INTEGER NOT NULL,
+      tpQuality INTEGER NOT NULL,
+      comments VARCHAR(255)
+    )
+  `)
+  .catch(console.error);
+}
+
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
