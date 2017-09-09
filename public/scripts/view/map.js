@@ -1,34 +1,60 @@
-'use strict';
+var map;
+var chicago = {lat: 41.85, lng: -87.65};
 
-//initializing google map
-function initMap() {
-  var coords = {lat: 47.6164918, lng: -122.3511866};
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
-    center: coords
+<<<<<<< HEAD
+/**
+ * The CenterControl adds a control to the map that recenters the map on
+ * Chicago.
+ * This constructor takes the control DIV as an argument.
+ * @constructor
+ */
+function CenterControl(controlDiv, map) {
+
+  // Set CSS for the control border.
+  var controlUI = document.createElement('div');
+  controlUI.style.backgroundColor = '#A874D4';
+  controlUI.style.borderRadius = '3px';
+  controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+  controlUI.style.cursor = 'pointer';
+  controlUI.style.marginBottom = '22px';
+  controlUI.style.marginTop = '22px';
+  controlUI.style.textAlign = 'center';
+  controlUI.title = 'Click to add toilet';
+  controlDiv.appendChild(controlUI);
+
+  // Set CSS for the control interior.
+  var controlText = document.createElement('div');
+  controlText.style.color = 'white';
+  controlText.style.fontFamily = 'Delius Unicase', 'cursive';
+  controlText.style.fontSize = '16px';
+  controlText.style.lineHeight = '38px';
+  controlText.style.paddingLeft = '5px';
+  controlText.style.paddingRight = '5px';
+  controlText.innerHTML = 'Add Toilet';
+  controlUI.appendChild(controlText);
+
+  // Setup the click event listeners: simply set the map to Chicago.
+  controlUI.addEventListener('click', function() {
+  //this will load up the form
   });
 
-  //following lines of code creates a marker then gives that marker an info window and a event listener
-  function addMarker(obj){
-    var marker = new google.maps.Marker({
-      position: obj.coords,
-      map: map,
-      icon: obj.icon
-    });
+}
 
-    var infoWindow = new google.maps.InfoWindow({
-      content: obj.info
-    });
-    marker.addListener('mouseover', function() {
-      infoWindow.open(map, marker);
-    });
-    marker.addListener('mouseout', function() {
-      infoWindow.close(map,marker);
-    });
-  }
+=======
+//initializing google map
+>>>>>>> 2552bf9406f0ddf166a1ee0efef73f9de223f439
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    center: chicago
+  });
 
-  //loops through our array with all the toilets and adds a marker and info window and event listener
-  for (var i = 0; i < toilets.length; i++) {
-    addMarker(toilets[i]);
-  }
-};
+  // Create the DIV to hold the control and call the CenterControl()
+  // constructor passing in this DIV.
+  var centerControlDiv = document.createElement('div');
+  var centerControl = new CenterControl(centerControlDiv, map);
+
+  centerControlDiv.index = 1;
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
+  console.log('done');
+}
