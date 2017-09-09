@@ -73,7 +73,7 @@ app.post('/toilets', function(request, response){
       if(err) console.error(err);
       response.send('insert complete');
       queryTwo();
-    }
+    });
 
   function queryTwo() {
     client.query(
@@ -97,10 +97,8 @@ app.post('/toilets', function(request, response){
       function(err) {
         if(err) console.error(err);
         response.send('insert complete');
-    );
-  };
-
-  )
+      });
+  }
 });
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
