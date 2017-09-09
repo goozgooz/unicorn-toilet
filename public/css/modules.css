@@ -116,6 +116,12 @@ body {
 }
 @media screen and (max-width: 825px) {
   .about-us{
-    width:50%;
+    width:90%;
+  }
+  .about-us p{
+    font-size: 12px;
+    text-align: center;
+    float:none;
+    margin: auto;
   }
 }
