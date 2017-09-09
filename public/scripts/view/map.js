@@ -1,9 +1,5 @@
 'use strict';
 
-//array to hold all of our toilets
-var toilets = [];
-var toilets = JSON.parse(localStorage.data);
-
 //initializing google map
 function initMap() {
   var coords = {lat: 47.6164918, lng: -122.3511866};
