@@ -9,6 +9,6 @@ $('#aboutLink').on('click',function(){
 })
 $('#homeLink').on('click',function(){
   $('#map').show();
-    $('.aboutUsAll').fadeOut();
+    $('.aboutUsAll').hide();
     $('.footer').show();
 })

@@ -31,23 +31,6 @@ h6 {
   -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 231, 255, 0.8));
 }
 
-#D {
-  background-color: #A874D4;
-}
-
-#A {
-  background-color: #ED7DC0;
-  color: white;
-}
-
-#R{
-  background-color: #A874D4;
-}
-
-#N{
-  background-color: #ED7DC0;
-  color: white;
-}
 
 .nav-links a {
   padding: 10px;
@@ -57,4 +40,8 @@ h6 {
 }
 #active-link {
   color: #A874D4;
+}
+
+p{
+    font-family: 'Delius Unicase', cursive;
 }
