@@ -3,6 +3,7 @@ body {
   height: auto;
   text-align: center;
   margin: auto;
+  background-color:#FCF9FF;
   /*border: 2px solid black;*/
 }
 
@@ -13,7 +14,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 10;
-  background-color: white;
+  background-color: #F6EFFF;
   font-family: 'Delius Unicase', cursive;
   font-size: .8em;
   margin: 0 auto;
