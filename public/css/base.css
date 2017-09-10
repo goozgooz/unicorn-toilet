@@ -35,11 +35,13 @@ h6 {
 .nav-links a {
   padding: 10px;
   text-decoration: none;
-  color: #FF988E;
   font-weight: bold;
 }
-#active-link {
-  color: #A874D4;
+.active-link {
+  color:#A874D4;
+}
+.nonactive-link{
+  color:#FF988E;
 }
 
 p{
