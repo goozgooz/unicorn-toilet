@@ -1,5 +1,5 @@
 var map;
-var chicago = {lat: 41.85, lng: -87.65};
+var codefellows = {lat: 47.618248, lng: -122.351871};
 
 /**
  * The CenterControl adds a control to the map that recenters the map on
@@ -43,7 +43,7 @@ function CenterControl(controlDiv, map) {
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 12,
-    center: chicago,
+    center: codefellows,
     styles: [
            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
