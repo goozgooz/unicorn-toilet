@@ -8,19 +8,6 @@ var app = app || {};
   function Toilet(toiletData){
     Object.keys(toiletData).forEach(key => this[key] = toiletData[key]);
   }
-  // function Toilet(location, paperQuality, oneToilet, multipleToilets, foamSoap, gelSoap, paperTowels, airDry, genderNeutral, free, pay){
-  //   this.location = location;
-  //   this.paperQuality = paperQuality;
-  //   this.oneToilet = oneToilet;
-  //   this.multipleToilets = multipleToilets;
-  //   this.foamSoap = foamSoap;
-  //   this.gelSoap = gelSoap;
-  //   this.paperTowels = paperTowels;
-  //   this.airDry = airDry;
-  //   this.genderNeutral = genderNeutral;
-  //   this.free = free;
-  //   this.pay = pay;
-  // };
 
   //Array to hold toilets
   Toilet.all = [];
@@ -38,18 +25,6 @@ var app = app || {};
       });
   };
 
-  Toilet.prototype.insertRecord = function() {
-    $.post('/toilets', {location: this.location,
-                        usage: this.usage,
-                        occupancy: this.occupancy,
-                        genderNeutral: this.genderNeutral,
-                        soap: this.soap,
-                        drying: this.drying,
-                        overallQuality: this.overallQuality,
-                        tpQuality: this.tpQuality,
-                        comments: this.comments})
-    .then(console.log);
-  };
 
   module.Toilet = Toilet;
 })(app);

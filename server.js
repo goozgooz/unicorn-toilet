@@ -3,12 +3,11 @@
 const pg = require('pg');
 const fs = require('fs');
 const express = require('express');
-// const bodyParser = require('body-parser');
-// const requestProxy = require('express-request-proxy');
+const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-const conString = process.env.DATABASE_URL || 'postgres://postgres:1234@localhost:5432/postgres';
+const conString = process.env.DATABASE_URL || 'postgres://ashkaan@localhost:5432/toilets'
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.log(err));
@@ -36,7 +35,7 @@ function loadDB(){
     toilets(
       toilet_id SERIAL PRIMARY KEY,
       location VARCHAR(30),
-      occupancy INTEGER,   
+      occupancy INTEGER,
       soap VARCHAR(5),
       drying VARCHAR(10),
       genderNeutral VARCHAR(5),
@@ -59,6 +58,7 @@ function loadDB(){
 }
 
 app.post('/toilets', function(request, response){
+  console.log(request.body);
   client.query(
     'INSERT INTO toilets(location, occupancy, soap, drying, genderNeutral, usage) VALUES($1, $2, $3, $4, $5, $6) ON CONFLICT DO NOTHING',
     [
