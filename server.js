@@ -36,7 +36,7 @@ function loadDB(){
     toilets(
       toilet_id SERIAL PRIMARY KEY,
       location VARCHAR(30),
-      occupancy INTEGER,
+      occupancy VARCHAR(10),
       soap VARCHAR(5),
       drying VARCHAR(10),
       genderNeutral VARCHAR(5),
