@@ -12,7 +12,7 @@ const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.log(err));
 
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 app.use(express.static("./public"));
 
 app.get('/toilets', (req, res) => {
