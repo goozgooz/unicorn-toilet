@@ -89,6 +89,11 @@ body {
   float: right;
   margin-right: 10px;
 }
+.about-us img{
+  float: left;
+  height: 200px;
+  margin-left: 30px;
+}
 /*Footer Stuff*/
 .footer {
   display: block;
@@ -139,6 +144,20 @@ body {
     font-size: 12px;
     text-align: center;
     float:none;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1384px) {
+  .about-us p {
+    float: none;
+    text-align: center;
+    margin: auto;
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+  .about-us img{
+    float: none;
+    text-align: center;
     margin: auto;
   }
 }
