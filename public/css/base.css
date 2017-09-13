@@ -2,6 +2,13 @@
   font-family: fantasy;
   text-align: center;
 }
+h1{
+  color: #A874D4;
+  font-family: 'Delius Unicase', cursive;
+  font-weight: bold;
+  margin-bottom: 5px;
+
+}
 h2{
   color: black;
   font-weight: bold;

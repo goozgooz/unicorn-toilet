@@ -34,7 +34,9 @@ function CenterControl(controlDiv, map) {
 
   // Setup the click event listeners: simply set the map to Codefellows.
   controlUI.addEventListener('click', function() {
-  //this will load up the form
+    console.log('clicked');
+    $('.mainContent').hide();
+    $('.aboutUsAll').hide();
   });
 
 }
