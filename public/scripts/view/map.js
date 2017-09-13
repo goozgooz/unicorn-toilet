@@ -1,4 +1,6 @@
+var geocoder;
 var map;
+
 var codefellows = {lat: 47.618248, lng: -122.351871};
 
 /**
@@ -41,6 +43,7 @@ function CenterControl(controlDiv, map) {
 
 //initializing google map
 function initMap() {
+  geocoder = new google.maps.Geocoder();
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 12,
     center: codefellows,
@@ -125,6 +128,21 @@ function initMap() {
            }
          ]
   });
+
+  function codeAddress(){
+    var address = "";
+    geocoder.geocode({'address': address}, function(results, status){
+      if(status === 'OK'){
+        // map.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location
+        });
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
+      }
+    });
+  }
 
   // Create the DIV to hold the control and call the CenterControl()
   // constructor passing in this DIV.
