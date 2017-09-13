@@ -146,6 +146,7 @@ function initMap() {
 function codeAddress(toilet){
   var address = toilet.location;
   geocoder.geocode({'address': address}, function(results, status){
+    console.log(results)
     if(status === 'OK'){
       // map.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({
