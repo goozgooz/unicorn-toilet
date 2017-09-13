@@ -4,13 +4,11 @@ $( document ).ready(function() {
   $('.toilet-form').hide();
 });
 $('#aboutLink').on('click',function(){
+  $('.mainContent #map').hide();
   $('.aboutUsAll').fadeIn();
-  $('.mainContent').hide();
-  $('.footer').hide();
   $('.toilet-form').hide();
 })
 $('#homeLink').on('click',function(){
     $('.aboutUsAll').hide();
-    $('.footer').show();
-    $('.mainContent').show();
+    $('.mainContent #map').show();
 })
