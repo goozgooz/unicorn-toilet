@@ -143,7 +143,7 @@ function initMap() {
   console.log('done');
 }
 
-function codeAddress(toilet){
+function addMarker(toilet){
   var address = toilet.location;
   geocoder.geocode({'address': address}, function(results, status){
     console.log(results)
@@ -160,5 +160,6 @@ function codeAddress(toilet){
 }
 
 function loadMarkers(){
-  app.Toilet.all.forEach(codeAddress(toilet));
+  app.Toilet.all.forEach(toilet.info());
+  app.Toilet.all.forEach(addMarker(toilet));
 }
