@@ -10,7 +10,7 @@ h1{
 
 }
 h2{
-  color: black;
+  color: white;
   font-weight: bold;
   font-family: 'Delius Unicase', cursive;
 }
@@ -56,4 +56,8 @@ label{
 p{
   font-family:  'Roboto', sans-serif;
   padding-top: 30px;
+}
+
+#difColor{
+  background-color:#FF988E;
 }
