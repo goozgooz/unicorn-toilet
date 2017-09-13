@@ -147,3 +147,17 @@ body {
     margin: auto;
   }
 }
+@media screen and (max-width: 1384px) {
+  .about-us p {
+    float: none;
+    text-align: center;
+    margin: auto;
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+  .about-us img{
+    float: none;
+    text-align: center;
+    margin: auto;
+  }
+}
