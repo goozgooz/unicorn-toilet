@@ -91,8 +91,10 @@ body {
 }
 /*Footer Stuff*/
 .footer {
+  display: block;
   font-family: 'Delius Unicase', cursive;
   text-align: center;
+  margin-top: 5%;
   letter-spacing: .5px;
   color: grey;
 }
@@ -104,7 +106,7 @@ body {
 }
 
 .footer hr {
-  width: 100%;
+  width: 75%;
   margin-bottom: 15px;
 }
 
