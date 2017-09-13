@@ -16,19 +16,14 @@ function NewPooper(location, overallQuality, tpQuality, usage, occupancy, gender
   this.soap = soap;
   this.drying = drying;
   this.comments = comments;
+  console.log('made a pooper');
 }
 
 NewPooper.prototype.insertRecord = function() {
-  $.post('/toilets', {location: this.location,
-                      overallQuality: this.overallQuality,
-                      tpQuality: this.tpQuality,
-                      usage: this.usage,
-                      occupancy: this.occupancy,
-                      genderNeutral: this.genderNeutral,
-                      drying: this.drying,
-                      comments: this.comments})
-  .then(console.log);
-};
+  console.log('inserted record');
+  $.post('/toilets', {name: 'poop'}
+).then(()=>console.log('something'), ()=>console.log('different thing'))
+}
 
 newToilet.submit = function(event) {
   event.preventDefault();
@@ -52,10 +47,9 @@ newToilet.submit = function(event) {
     $('input[name=gender]:checked', '#new-toilet').val(),
     $('input[name=soap]:checked', '#new-toilet').val(),
     $('input[name=drying]:checked', '#new-toilet').val(),
-    $('#comments').val(),
+    $('#comments').val()
   );
   console.log(toilet);
-
   toilet.insertRecord();
 }
 
@@ -65,8 +59,7 @@ newToilet.handleForm = function(){
 
   newToilet.handleForm();
 
-  module.NewPooper = NewPooper;
+  // module.NewPooper = NewPooper;
   module.newToilet = newToilet;
-
 
 })(app);

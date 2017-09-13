@@ -1,3 +1,7 @@
+'use strict';
+
+var app = app || {};
+
 var map;
 var codefellows = {lat: 47.618248, lng: -122.351871};
 
@@ -134,4 +138,5 @@ function initMap() {
   centerControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
   console.log('done');
+
 }
