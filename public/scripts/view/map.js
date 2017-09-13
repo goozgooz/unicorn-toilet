@@ -3,7 +3,7 @@ var codefellows = {lat: 47.618248, lng: -122.351871};
 
 /**
  * The CenterControl adds a control to the map that recenters the map on
- * Chicago.
+ * codefellows.
  * This constructor takes the control DIV as an argument.
  * @constructor
  */
@@ -32,9 +32,11 @@ function CenterControl(controlDiv, map) {
   controlText.innerHTML = 'Add Toilet';
   controlUI.appendChild(controlText);
 
-  // Setup the click event listeners: simply set the map to Chicago.
+  // Setup the click event listeners: simply set the map to Codefellows.
   controlUI.addEventListener('click', function() {
-  //this will load up the form
+    console.log('clicked');
+    $('.mainContent').hide();
+    $('.aboutUsAll').hide();
   });
 
 }
@@ -44,92 +46,16 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 12,
     center: codefellows,
-    styles: [
-           {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-           {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-           {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-           {
-             featureType: 'administrative.locality',
-             elementType: 'labels.text.fill',
-             stylers: [{color: '#d59563'}]
-           },
-           {
-             featureType: 'poi',
-             elementType: 'labels.text.fill',
-             stylers: [{color: '#d59563'}]
-           },
-           {
-             featureType: 'poi.park',
-             elementType: 'geometry',
-             stylers: [{color: '#263c3f'}]
-           },
-           {
-             featureType: 'poi.park',
-             elementType: 'labels.text.fill',
-             stylers: [{color: '#6b9a76'}]
-           },
-           {
-             featureType: 'road',
-             elementType: 'geometry',
-             stylers: [{color: '#38414e'}]
-           },
-           {
-             featureType: 'road',
-             elementType: 'geometry.stroke',
-             stylers: [{color: '#212a37'}]
-           },
-           {
-             featureType: 'road',
-             elementType: 'labels.text.fill',
-             stylers: [{color: '#9ca5b3'}]
-           },
-           {
-             featureType: 'road.highway',
-             elementType: 'geometry',
-             stylers: [{color: '#746855'}]
-           },
-           {
-             featureType: 'road.highway',
-             elementType: 'geometry.stroke',
-             stylers: [{color: '#1f2835'}]
-           },
-           {
-             featureType: 'road.highway',
-             elementType: 'labels.text.fill',
-             stylers: [{color: '#f3d19c'}]
-           },
-           {
-             featureType: 'transit',
-             elementType: 'geometry',
-             stylers: [{color: '#2f3948'}]
-           },
-           {
-             featureType: 'transit.station',
-             elementType: 'labels.text.fill',
-             stylers: [{color: '#d59563'}]
-           },
-           {
-             featureType: 'water',
-             elementType: 'geometry',
-             stylers: [{color: '#17263c'}]
-           },
-           {
-             featureType: 'water',
-             elementType: 'labels.text.fill',
-             stylers: [{color: '#515c6d'}]
-           },
-           {
-             featureType: 'water',
-             elementType: 'labels.text.stroke',
-             stylers: [{color: '#17263c'}]
-           }
-         ]
   });
 
   // Create the DIV to hold the control and call the CenterControl()
   // constructor passing in this DIV.
   var centerControlDiv = document.createElement('div');
   var centerControl = new CenterControl(centerControlDiv, map);
+  var marker = new google.maps.Marker({
+          position: codefellows,
+          map: map,
+        });
 
   centerControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
