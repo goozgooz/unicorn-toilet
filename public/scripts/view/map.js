@@ -37,6 +37,7 @@ function CenterControl(controlDiv, map) {
     console.log('clicked');
     $('.mainContent').hide();
     $('.aboutUsAll').hide();
+    $('.toilet-form').show();
   });
 
 }
