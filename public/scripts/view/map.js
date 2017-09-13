@@ -129,20 +129,9 @@ function initMap() {
          ]
   });
 
-  function codeAddress(){
-    var address = "";
-    geocoder.geocode({'address': address}, function(results, status){
-      if(status === 'OK'){
-        // map.setCenter(results[0].geometry.location);
-        var marker = new google.maps.Marker({
-          map: map,
-          position: results[0].geometry.location
-        });
-      } else {
-        alert('Geocode was not successful for the following reason: ' + status);
-      }
-    });
-  }
+
+
+
 
   // Create the DIV to hold the control and call the CenterControl()
   // constructor passing in this DIV.
@@ -152,4 +141,23 @@ function initMap() {
   centerControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
   console.log('done');
+}
+
+function codeAddress(toilet){
+  var address = toilet.location;
+  geocoder.geocode({'address': address}, function(results, status){
+    if(status === 'OK'){
+      // map.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: map,
+        position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
+
+function loadMarkers(){
+  app.Toilet.all.forEach(codeAddress(toilet));
 }
