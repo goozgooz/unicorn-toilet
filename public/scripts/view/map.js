@@ -45,7 +45,7 @@ function CenterControl(controlDiv, map) {
 
 //initializing google map
 function initMap() {
-  geocoder = new google.maps.Geocoder();
+  var geocoder = new google.maps.Geocoder();
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 12,
     center: codefellows,
@@ -56,28 +56,44 @@ function initMap() {
   var centerControlDiv = document.createElement('div');
   var centerControl = new CenterControl(centerControlDiv, map);
   var marker = new google.maps.Marker({
-          position: codefellows,
-          map: map,
-        });
+    position: codefellows,
+    map: map,
+  });
 
   centerControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
 }
 
-function addMarker(toilet){
-  var address = toilet.location;
-  geocoder.geocode({'address': address}, function(results, status){
-    console.log(results)
-    if(status === 'OK'){
-      // map.setCenter(results[0].geometry.location);
-      var marker = new google.maps.Marker({
-        map: map,
-        position: results[0].geometry.location
-      });
-    } else {
-      alert('Geocode was not successful for the following reason: ' + status);
+// function addMarker(toilet, map){
+//   console.log(toilet);
+//   var placeId = toilet.location;
+//   geocoder.geocode({'placeId': placeId}, function(results, status){
+//     if(status === 'OK'){
+//       // map.setCenter(results[0].geometry.location);
+//       var marker = new google.maps.Marker({
+//         map: map,
+//         position: results[0].geometry.location
+//       });
+//     } else {
+//       console.log('Geocode was not successful for the following reason: ' + status);
+//     }
+//   });
+// }
+
+function geocode(toilet) {
+  var place = toilet.location;
+  axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+    params:{
+      address:place,
+      key: 'AIzaSyByLJF7mtLoXCiyAiB0M6quGWfVERGhoZU',
     }
-  });
+  })
+  .then(function(res){
+    console.log(res);
+  })
+  .catch(function(err){
+    console.log(err);
+  })
 }
 
 function loadMarkers(){

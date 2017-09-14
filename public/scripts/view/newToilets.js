@@ -52,7 +52,7 @@ newToilet.submit = function(event) {
     $('input[name=drying]:checked', '#new-toilet').val(),
     $('#comments').val(),
   );
-  console.log(toilet);
+  geocode(toilet);
 
   toilet.insertRecord();
 

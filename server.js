@@ -17,7 +17,7 @@ app.use(express.static("./public"));
 
 loadDB();
 
-app.get('/toilets', (req, res) => {
+app.get('/toilets', (req, response) => {
   client.query(`
     SELECT * FROM toilets
     INNER JOIN reviews
