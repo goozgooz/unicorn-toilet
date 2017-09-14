@@ -51,10 +51,6 @@ function initMap() {
     center: codefellows,
   });
 
-
-
-
-
   // Create the DIV to hold the control and call the CenterControl()
   // constructor passing in this DIV.
   var centerControlDiv = document.createElement('div');
