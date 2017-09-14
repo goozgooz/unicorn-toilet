@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/modules.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
-    <link href="https://fonts.googleapis.com/css?family=Delius+Unicase:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Delius+Unicase:400,700 | Roboto" rel="stylesheet">
   </head>
   <body>
     <div class="navbar">
@@ -27,42 +27,152 @@
           <!-- <div class="sideBar">
             <h2>Data</h2>
           </div> -->
-
-          <div class="footer">
-            <hr>
-            <h2 id="unicorn">Unicorn Toilet</h2>
-            <h3>J.A.C.D .... no we don't lift</h3>
-            <h3>&copy 2017</h3>
-          </div>
     </div>
 
     <div class="aboutUsAll">
 
       <div class="about-us" id="difColor">
-        <img src="" alt="">
+        <img src="css/images/rainbowShit.png" alt="">
+        <h2>Ashkaan Jaberi</h2>
         <p>Haxx0r ipsum data fail foo fopen ip double cache back door afk ack default bit exception while class for void linux rsa todo socket suitably small values. Loop if firewall fork case overflow mega gobble bypass packet sniffer finally client port function salt null float Trojan horse xss false int. /dev/null error cd tcp boolean do less win concurrently protocol cookie eof frack irc hexadecimal big-endian sudo Starcraft stack trace.</p>
       </div>
 
       <div class="about-us">
-        <img src="" alt="">
+        <img src="css/images/rainbowShit.png" alt="">
+        <h2>James Zollin</h2>
         <p>Haxx0r ipsum data fail foo fopen ip double cache back door afk ack default bit exception while class for void linux rsa todo socket suitably small values. Loop if firewall fork case overflow mega gobble bypass packet sniffer finally client port function salt null float Trojan horse xss false int. /dev/null error cd tcp boolean do less win concurrently protocol cookie eof frack irc hexadecimal big-endian sudo Starcraft stack trace.</p>
       </div>
 
       <div class="about-us" id="difColor">
-        <img src="" alt="">
+        <img src="css/images/rainbowShit.png" alt="">
+        <h2>Cole Allen</h2>
         <p>Haxx0r ipsum data fail foo fopen ip double cache back door afk ack default bit exception while class for void linux rsa todo socket suitably small values. Loop if firewall fork case overflow mega gobble bypass packet sniffer finally client port function salt null float Trojan horse xss false int. /dev/null error cd tcp boolean do less win concurrently protocol cookie eof frack irc hexadecimal big-endian sudo Starcraft stack trace.</p>
       </div>
 
       <div class="about-us">
-        <img src="" alt="">
+        <img src="css/images/rainbowShit.png" alt="">
+        <h2>Dalton Carr</h2>
         <p>Haxx0r ipsum data fail foo fopen ip double cache back door afk ack default bit exception while class for void linux rsa todo socket suitably small values. Loop if firewall fork case overflow mega gobble bypass packet sniffer finally client port function salt null float Trojan horse xss false int. /dev/null error cd tcp boolean do less win concurrently protocol cookie eof frack irc hexadecimal big-endian sudo Starcraft stack trace.</p>
       </div>
 
     </div>
+  <div class="toilet-form">
+
+    <h1>New Toilet Form</h1>
+    <form id="new-toilet">
+      <label>
+        <input type="text" id="location" placeholder="Toilet Location" style="width: 200px; height:30px;" required>
+      </label>
+      <div id="overall-quality">
+        <h5>Overall Restroom Quality</h5>
+
+        <label for"one-star">1</label>
+        <input type="radio" id="one-star" value="1" name="toilet">
+
+        <label for"two-star">2</label>
+        <input type="radio" id="two-star" value="2" name="toilet">
+
+        <label for"three-star">3</label>
+        <input type="radio" id="three-star" value="3" name="toilet">
+
+        <label for"four-star">4</label>
+        <input type="radio" id="four-star" value="4" name="toilet">
+
+        <label for"five-star">5</label>
+        <input type="radio" id="five-star" value="5" name="toilet">
+
+      </div>
+
+      <div id="tp-quality">
+        <h5>Toilet Paper Quality</h5>
+
+        <label for"tp-one-star">1</label>
+        <input type="radio" id="tp-one-star" value="1" name="tp">
+
+        <label for"tp-two-star">2</label>
+        <input type="radio" id="tp-two-star" value="2" name="tp">
+
+        <label for"tp-three-star">3</label>
+        <input type="radio" id="tp-three-star" value="3" name="tp">
+
+        <label for"tp-four-star">4</label>
+        <input type="radio" id="tp-four-star" value="4" name="tp">
+
+        <label for"tp-five-star">5</label>
+        <input type="radio" id="tp-five-star" value="5" name="tp">
+      </div>
+
+      <div id="usage">
+        <h5>Free to Use or Pay to Use</h5>
+
+        <label for"free">Free:</label>
+        <input type="radio" id="free" value="free" name="use">
+
+        <label for"pay">Pay:</label>
+        <input type="radio" id="pay" value="pay" name="use">
+      </div>
+
+      <div id="occupancy">
+        <h5>Single vs Multipe Toilets</h5>
+
+        <label for"single">Single:</label>
+        <input type="radio" id="single" value="single" name="occupancy">
+
+        <label for"multiple">Multiple:</label>
+        <input type="radio" id="multiple" value="multiple" name="occupancy">
+      </div>
+
+      <div id="gender-neutral">
+        <h5>Gendar Neutral</h5>
+
+        <label for"yes">Yes:</label>
+        <input type="radio" id="yes" value="yes" name="gender">
+
+        <label for"no">No:</label>
+        <input type="radio" id="no" value="no" name="gender">
+      </div>
+
+      <div id="soap">
+        <h5>Soap Type</h5>
+
+        <label for"gel">Gel:</label>
+        <input type="radio" id="gel" value="gel" name="soap">
+
+        <label for"foam">Foam:</label>
+        <input type="radio" id="foam" value="foam" name="soap">
+      </div>
+
+      <div id="drying">
+        <h5>Drying Method(s)</h5>
+
+        <label for"paper">Paper Towel:</label>
+        <input type="radio" id="paper" value="paper" name="drying">
+
+        <label for"air">Air Dryer:</label>
+        <input type="radio" id="air" value="air" name="drying">
+
+        <label for"air">Both:</label>
+        <input type="radio" id="air" value="both" name="drying">
+      </div>
+
+      <label>Comments:</label>
+      <input type="text" id="comments" style="width: 200px; height:30px; margin-top:30px;">
+
+        <button type="submit">Submit Pooper</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    <hr>
+    <h2 id="unicorn">Unicorn Toilet</h2>
+    <h3>J.A.C.D .... no we don't lift</h3>
+    <h3>&copy 2017</h3>
+  </div>
 
   <script src="vendor/scripts/jquery-3.2.1.js"></script>
   <script src="scripts/model/toilet.js"></script>
   <script src="scripts/view/map.js"></script>
   <script src="scripts/controller/aboutUs.js"></script>
+  <script src="scripts/controller/pageNav.js"></script>
   </body>
 </html>
