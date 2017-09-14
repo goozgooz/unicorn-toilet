@@ -31,6 +31,7 @@ NewPooper.prototype.insertRecord = function() {
       usage: this.usage,
       occupancy: this.occupancy,
       genderNeutral: this.genderNeutral,
+      soap: this.soap,
       drying: this.drying,
       comments: this.comments
     })
