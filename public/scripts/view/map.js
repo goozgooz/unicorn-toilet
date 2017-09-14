@@ -59,11 +59,23 @@ function initMap() {
           position: codefellows,
           map: map,
         });
+  var script = document.createElement('script');
+  script.src='https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
+  document.getElementsByTagName('head')[0].appendChild(script);
 
   centerControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
 }
-
+window.eqfeed_callback = function(results) {
+  for (var i = 0; i < results.features.length; i++) {
+    var coords = results.features[i].geometry.coordinates;
+    var latLng = new google.maps.LatLng(coords[1],coords[0]);
+    var marker = new google.maps.Marker({
+      position: latLng,
+      map: map
+    });
+  }
+}
 function addMarker(toilet){
   var address = toilet.location;
   geocoder.geocode({'address': address}, function(results, status){
