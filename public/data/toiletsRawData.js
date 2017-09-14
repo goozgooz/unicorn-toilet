@@ -1,3 +1,5 @@
+'use strict';
+
 var newToilets = [
   {
     locationName: 'Sport Restaurant & Bar',
