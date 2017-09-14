@@ -34,7 +34,7 @@ function loadDB(){
     CREATE TABLE IF NOT EXISTS
     toilets(
       toilet_id SERIAL PRIMARY KEY,
-      location VARCHAR(30),
+      location VARCHAR(50),
       occupancy VARCHAR(10),
       soap VARCHAR(5),
       drying VARCHAR(10),
@@ -85,7 +85,7 @@ app.post('/toilets', function(request, response){
     });
   }
 
-  function queryThree(toilet_id) {
+  function queryThree(request, toilet_id) {
     client.query(
       'INSERT INTO reviews(toilet_id, overallQuality, tpQuality, comments) VALUES($1, $2, $3, $4)'
       [

@@ -20,7 +20,7 @@ function NewPooper(location, overallQuality, tpQuality, usage, occupancy, gender
 
 NewPooper.prototype.insertRecord = function() {
   $.ajax({
-    url: '/toilets', 
+    url: '/toilets',
     method: 'POST',
     dataType: 'json',
     contentType: 'application/json; charset=utf-8',
@@ -31,6 +31,7 @@ NewPooper.prototype.insertRecord = function() {
       usage: this.usage,
       occupancy: this.occupancy,
       genderNeutral: this.genderNeutral,
+      soap: this.soap,
       drying: this.drying,
       comments: this.comments
     })
