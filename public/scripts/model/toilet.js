@@ -23,12 +23,14 @@ var app = app || {};
   }
 
   //get data from database
-  Toilet.fetchData = function(){
+  Toilet.fetchData = function(callback){
     $.get('/toilets')
       .then(results => {
         Toilet.loadAll(results);
-      });
+      })
+      .then(callback());
   };
+
 
 
   module.Toilet = Toilet;

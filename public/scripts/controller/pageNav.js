@@ -6,6 +6,7 @@ $('.homeLink').ready(function() {
   $('.toilet-form').hide();
   $('.mainContent').fadeIn();
   $('.homeLink').addClass('active-link');
+  app.Toilet.fetchData(loadMarkers);
 });
 
 $('.homeLink').on('click', function(){
@@ -14,6 +15,7 @@ $('.homeLink').on('click', function(){
   $('.toilet-form').hide();
   $('.mainContent').fadeIn();
   $('.homeLink').addClass('active-link');
+    app.Toilet.fetchData(loadMarkers);
 });
 
 $('.aboutLink').on('click',function(){

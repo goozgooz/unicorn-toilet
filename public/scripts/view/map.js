@@ -81,6 +81,6 @@ function addMarker(toilet){
 }
 
 function loadMarkers(){
-  app.Toilet.all.forEach(toilet.info());
-  app.Toilet.all.forEach(addMarker(toilet));
+  app.Toilet.all.forEach(toilet => toilet.info());
+  app.Toilet.all.forEach(toilet => addMarker(toilet));
 }
