@@ -20,7 +20,7 @@ function NewPooper(location, overallQuality, tpQuality, usage, occupancy, gender
 
 NewPooper.prototype.insertRecord = function() {
   $.ajax({
-    url: '/toilets', 
+    url: '/toilets',
     method: 'POST',
     dataType: 'json',
     contentType: 'application/json; charset=utf-8',
@@ -40,17 +40,6 @@ NewPooper.prototype.insertRecord = function() {
 
 newToilet.submit = function(event) {
   event.preventDefault();
-  // let toilet = new newPooper(
-  //   location: $('#location').val(),
-  //   overallQuality: $('input[name=toilet]:checked', '#new-toilet').val(),
-  //   tpQuality: $('input[name=tp]:checked', '#new-toilet').val(),
-  //   usage: $('input[name=use]:checked', '#new-toilet').val(),
-  //   occupancy: $('input[name=occupancy]:checked', '#new-toilet').val(),
-  //   genderNeutral: $('input[name=gender]:checked', '#new-toilet').val(),
-  //   soap: $('input[name=soap]:checked', '#new-toilet').val(),
-  //   drying: $('input[name=drying]:checked', '#new-toilet').val(),
-  //   comments: $('#comments').val(),
-  // );
   let toilet = new NewPooper(
     $('#location').val(),
     $('input[name=toilet]:checked', '#new-toilet').val(),
@@ -65,13 +54,18 @@ newToilet.submit = function(event) {
   console.log(toilet);
 
   toilet.insertRecord();
+
+  $('.toilet-form').hide();
+  $('.mainContent').fadeIn();
+  //TODO function to reload all the data from DB back into map
+
 }
 
 newToilet.handleForm = function(){
   $('#new-toilet').on('submit', newToilet.submit);
 };
 
-  newToilet.handleForm();
+newToilet.handleForm();
 
   module.NewPooper = NewPooper;
   module.newToilet = newToilet;

@@ -66,7 +66,6 @@ function initMap() {
 
   centerControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
-  console.log('done');
 }
 
 function addMarker(toilet){

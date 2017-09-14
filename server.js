@@ -15,6 +15,8 @@ client.on('error', err => console.log(err));
 app.use(bodyParser.json());
 app.use(express.static("./public"));
 
+loadDB();
+
 app.get('/toilets', (req, res) => {
   client.query(`
     SELECT * FROM toilets
@@ -24,9 +26,6 @@ app.get('/toilets', (req, res) => {
     .then(result => response.send(result.rows))
     .catch(console.error);
 });
-
-loadDB();
-
 
 //Database loader
 function loadDB(){
