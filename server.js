@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-const conString = process.env.DATABASE_URL || 'postgres://ashkaan@localhost:5432/toilets'
+const conString = process.env.DATABASE_URL || 'postgres://postgres:1234@localhost:5432/toilets'
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.log(err));
@@ -17,7 +17,7 @@ app.use(express.static("./public"));
 
 loadDB();
 
-app.get('/toilets', (req, res) => {
+app.get('/toilets', (req, response) => {
   client.query(`
     SELECT * FROM toilets
     INNER JOIN reviews
