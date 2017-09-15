@@ -12,6 +12,21 @@ var app = app || {};
   //Array to hold toilets
   Toilet.all = [];
 
+  Toilet.prototype.geocode = function(){
+    axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+      params:{
+        address:this.location,
+        key: 'AIzaSyByLJF7mtLoXCiyAiB0M6quGWfVERGhoZU',
+      }
+    })
+    .then(function(res){
+      console.log(res.data.results[0].geometry.location);
+    })
+    .catch(function(err){
+      console.log(err);
+    })
+  }
+
   //Info method
   Toilet.prototype.info = function(){
     this.info = '<h5>' + this.location + '</h5> <h6>' + this.overallQuality + '</h6> <h6>' + this.tpQuality + '</h6> <h6>' + this.usage + '</h6> <h6>' + this.occupancy + '</h6> <h6>' + this.genderNeutral + '</h6> <h6>' + this.drying + '</h6> <h6>' + this.comments + '</h6>';

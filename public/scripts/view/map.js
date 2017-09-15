@@ -45,9 +45,9 @@ function CenterControl(controlDiv, map) {
 
 //initializing google map
 function initMap() {
-  geocoder = new google.maps.Geocoder();
+  var geocoder = new google.maps.Geocoder();
   map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
+    zoom: 15,
     center: codefellows,
   });
 
@@ -59,25 +59,23 @@ function initMap() {
           position: codefellows,
           map: map,
         });
+  var script = document.createElement('script');
+  script.src='../../data/toiletsRawData.json';
+  document.getElementsByTagName('head')[0].appendChild(script);
 
   centerControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
 }
 
-function addMarker(toilet){
-  var address = toilet.location;
-  geocoder.geocode({'address': address}, function(results, status){
-    console.log(results)
-    if(status === 'OK'){
-      // map.setCenter(results[0].geometry.location);
-      var marker = new google.maps.Marker({
-        map: map,
-        position: results[0].geometry.location
-      });
-    } else {
-      alert('Geocode was not successful for the following reason: ' + status);
-    }
-  });
+window.eqfeed_callback = function(results) {
+  for (var i = 0; i < results.features.length; i++) {
+    var coords = results.features[i].geometry.coordinates;
+    var latLng = new google.maps.LatLng(coords[1],coords[0]);
+    var marker = new google.maps.Marker({
+      position: latLng,
+      map: map
+    });
+  }
 }
 
 function loadMarkers(){
