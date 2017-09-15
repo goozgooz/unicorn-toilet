@@ -56,12 +56,26 @@ function initMap() {
   var centerControlDiv = document.createElement('div');
   var centerControl = new CenterControl(centerControlDiv, map);
   var marker = new google.maps.Marker({
-    position: codefellows,
-    map: map,
-  });
+          position: codefellows,
+          map: map,
+        });
+  var script = document.createElement('script');
+  script.src='../../data/toiletsRawData.json';
+  document.getElementsByTagName('head')[0].appendChild(script);
 
   centerControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
+}
+
+window.eqfeed_callback = function(results) {
+  for (var i = 0; i < results.features.length; i++) {
+    var coords = results.features[i].geometry.coordinates;
+    var latLng = new google.maps.LatLng(coords[1],coords[0]);
+    var marker = new google.maps.Marker({
+      position: latLng,
+      map: map
+    });
+  }
 }
 
 function loadMarkers(){
