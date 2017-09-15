@@ -13,6 +13,7 @@ var app = app || {};
   Toilet.all = [];
 
   Toilet.prototype.geocode = function(callback){
+    var toilet = this;
     axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
       params:{
         address:this.location,
@@ -21,14 +22,9 @@ var app = app || {};
     })
     .then(function(res){
       var coords = res.data.results[0].geometry.location;
-      callback(coords);
+      callback(coords, toilet);
     })
     .catch(function(err){console.log(err);})
-  }
-
-  //Info method
-  Toilet.prototype.info = function(){
-    this.info = '<h5>' + this.location + '</h5> <h6>' + this.overallQuality + '</h6> <h6>' + this.tpQuality + '</h6> <h6>' + this.usage + '</h6> <h6>' + this.occupancy + '</h6> <h6>' + this.genderNeutral + '</h6> <h6>' + this.drying + '</h6> <h6>' + this.comments + '</h6>';
   }
 
   //set toilet array to data from database

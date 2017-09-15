@@ -14,6 +14,19 @@ h2{
   font-weight: bold;
   font-family: 'Delius Unicase', cursive;
 }
+
+h3{
+  color: #A874D4;
+  font-family: 'Delius Unicase', cursive;
+  margin: 0;
+}
+
+h4{
+  font-size: .8em;
+  font-weight: lighter;
+  margin: 0;
+}
+
 h5{
   color: #A874D4;
   font-family: 'Delius Unicase', cursive;

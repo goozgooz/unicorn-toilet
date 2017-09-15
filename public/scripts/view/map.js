@@ -78,16 +78,33 @@ window.eqfeed_callback = function(results) {
   }
 }
 
-function addMarker(coords){
+function addMarker(coords, toilet){
   var marker = new google.maps.Marker({
         map: map,
         position: coords
       });
+  var infoWindow = new google.maps.InfoWindow({
+    content: `<h3>${toilet.location}</h3>
+              <h4>Overall Quality: ${toilet.overallQuality}</h4>
+              <h4>TP Quality: ${toilet.tpQuality}</h4>
+              <h4>Overall Quality: ${toilet.overallQuality}</h4>
+              <h4>Free To Use or Pay: ${toilet.usage}</h4>
+              <h4>Single or Multiple occupancy: ${toilet.occupancy}</h4>
+              <h4>Gender Neutral Friendly: ${toilet.genderNeutral}</h4>
+              <h4>Gel Soap or Foam Soap: ${toilet.soap}</h4>
+              <h4>Paper Towels or Air Dry: ${toilet.drying}</h4>`
+  });
+  marker.addListener('mouseover', function() {
+    infoWindow.open(map, marker);
+  });
+  marker.addListener('mouseout', function() {
+    infoWindow.close(map,marker);
+  });
 }
+
 
 function loadMarkers(){
   app.Toilet.all.forEach(toilet => toilet.geocode(addMarker));
-  app.Toilet.all.forEach(toilet => toilet.info());
 }
 
 function initIndexPage(){

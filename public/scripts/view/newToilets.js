@@ -19,6 +19,7 @@ function NewPooper(location, overallQuality, tpQuality, usage, occupancy, gender
 }
 
 NewPooper.prototype.geocode = function(callback){
+  var toilet = this;
   axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
     params:{
       address:this.location,
@@ -27,7 +28,7 @@ NewPooper.prototype.geocode = function(callback){
   })
   .then(function(res){
     var coords = res.data.results[0].geometry.location;
-    callback(coords);
+    callback(coords, toilet);
   })
   .catch(function(err){console.log(err);})
 }
