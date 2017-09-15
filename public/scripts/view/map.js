@@ -47,7 +47,7 @@ function CenterControl(controlDiv, map) {
 function initMap() {
   var geocoder = new google.maps.Geocoder();
   map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
+    zoom: 15,
     center: codefellows,
   });
 
@@ -64,39 +64,7 @@ function initMap() {
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
 }
 
-// function addMarker(toilet, map){
-//   console.log(toilet);
-//   var placeId = toilet.location;
-//   geocoder.geocode({'placeId': placeId}, function(results, status){
-//     if(status === 'OK'){
-//       // map.setCenter(results[0].geometry.location);
-//       var marker = new google.maps.Marker({
-//         map: map,
-//         position: results[0].geometry.location
-//       });
-//     } else {
-//       console.log('Geocode was not successful for the following reason: ' + status);
-//     }
-//   });
-// }
-
-function geocode(toilet) {
-  var place = toilet.location;
-  axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
-    params:{
-      address:place,
-      key: 'AIzaSyByLJF7mtLoXCiyAiB0M6quGWfVERGhoZU',
-    }
-  })
-  .then(function(res){
-    console.log(res.data.results[0].geometry.location);
-  })
-  .catch(function(err){
-    console.log(err);
-  })
-}
-
 function loadMarkers(){
   app.Toilet.all.forEach(toilet.info());
   app.Toilet.all.forEach(addMarker(toilet));
-}
+};
