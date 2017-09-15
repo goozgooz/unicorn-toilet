@@ -1,0 +1,222 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -122.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":"",
+        "info":""
+
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -125.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -122.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -122.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -122.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -122.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -122.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -122.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -122.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
+      }
+    }
+  ]
+}
