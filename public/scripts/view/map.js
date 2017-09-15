@@ -88,11 +88,18 @@ window.toiletsJson = function(results) {
   }
 }
 
-// function loadMarkers(){
-//   app.Toilet.all.forEach(toilet => toilet.info());
-//   app.Toilet.all.forEach(toilet => toilet.geocode());
-//   app.Toilet.all.forEach(toilet => addMarker(toilet));
-// }
+function addMarker(coords){
+  var marker = new google.maps.Marker({
+        map: map,
+        position: coords
+      });
+}
+
+function loadMarkers(){
+  app.Toilet.all.forEach(toilet => toilet.geocode(addMarker));
+  app.Toilet.all.forEach(toilet => toilet.info());
+}
+
 
 // function initIndexPage(){
 //   app.Toilet.fetchData(loadMarkers);

@@ -12,7 +12,7 @@ var app = app || {};
   //Array to hold toilets
   Toilet.all = [];
 
-  Toilet.prototype.geocode = function(){
+  Toilet.prototype.geocode = function(callback){
     axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
       params:{
         address:this.location,
@@ -20,11 +20,10 @@ var app = app || {};
       }
     })
     .then(function(res){
-      console.log(res.data.results[0].geometry.location);
+      var coords = res.data.results[0].geometry.location;
+      callback(coords);
     })
-    .catch(function(err){
-      console.log(err);
-    })
+    .catch(function(err){console.log(err);})
   }
 
   //Info method
@@ -41,6 +40,7 @@ var app = app || {};
   Toilet.fetchData = function(callback){
     $.get('/toilets')
       .then(results => {
+        console.log(results);
         Toilet.loadAll(results);
       })
       .then(callback);
