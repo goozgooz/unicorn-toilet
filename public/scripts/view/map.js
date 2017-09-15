@@ -84,15 +84,15 @@ function addMarker(coords, toilet){
         position: coords
       });
   var infoWindow = new google.maps.InfoWindow({
-    content: `<h5>${toilet.location}</h5>
-              <h6>Overall Quality: ${toilet.overallQuality}</h6>
-              <h6>TP Quality: ${toilet.tpQuality}</h6>
-              <h6>Overall Quality: ${toilet.overallQuality}</h6>
-              <h6>Free To Use or Pay: ${toilet.usage}</h6>
-              <h6>Single or Multiple occupancy: ${toilet.occupancy}</h6>
-              <h6>Gender Neutral Friendly: ${toilet.genderNeutral}</h6>
-              <h6>Gel Soap or Foam Soap: ${toilet.soap}</h6>
-              <h6>Paper Towels or Air Dry: ${toilet.drying}</h6>`
+    content: `<h3>${toilet.location}</h3>
+              <h4>Overall Quality: ${toilet.overallQuality}</h4>
+              <h4>TP Quality: ${toilet.tpQuality}</h4>
+              <h4>Overall Quality: ${toilet.overallQuality}</h4>
+              <h4>Free To Use or Pay: ${toilet.usage}</h4>
+              <h4>Single or Multiple occupancy: ${toilet.occupancy}</h4>
+              <h4>Gender Neutral Friendly: ${toilet.genderNeutral}</h4>
+              <h4>Gel Soap or Foam Soap: ${toilet.soap}</h4>
+              <h4>Paper Towels or Air Dry: ${toilet.drying}</h4>`
   });
   marker.addListener('mouseover', function() {
     infoWindow.open(map, marker);
