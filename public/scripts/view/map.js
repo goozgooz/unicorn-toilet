@@ -89,7 +89,7 @@ function geocode(toilet) {
     }
   })
   .then(function(res){
-    console.log(res);
+    console.log(res.data.results[0].geometry.location);
   })
   .catch(function(err){
     console.log(err);
