@@ -79,6 +79,10 @@ window.eqfeed_callback = function(results) {
 }
 
 function loadMarkers(){
-  app.Toilet.all.forEach(toilet.info());
-  app.Toilet.all.forEach(addMarker(toilet));
-};
+  app.Toilet.all.forEach(toilet => toilet.info());
+  app.Toilet.all.forEach(toilet => addMarker(toilet));
+}
+
+function initIndexPage(){
+  app.Toilet.fetchData(loadMarkers);
+}
