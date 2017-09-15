@@ -18,7 +18,7 @@ function NewPooper(location, overallQuality, tpQuality, usage, occupancy, gender
   this.comments = comments;
 }
 
-NewPooper.prototype.geocode = function(){
+NewPooper.prototype.geocode = function(callback){
   axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
     params:{
       address:this.location,
@@ -26,11 +26,10 @@ NewPooper.prototype.geocode = function(){
     }
   })
   .then(function(res){
-    console.log(res.data.results[0].geometry.location);
+    var coords = res.data.results[0].geometry.location;
+    callback(coords);
   })
-  .catch(function(err){
-    console.log(err);
-  })
+  .catch(function(err){console.log(err);})
 }
 
 NewPooper.prototype.insertRecord = function() {
@@ -67,7 +66,7 @@ newToilet.submit = function(event) {
     $('input[name=drying]:checked', '#new-toilet').val(),
     $('#comments').val(),
   );
-  toilet.geocode();
+  toilet.geocode(addMarker);
 
   toilet.insertRecord();
 
