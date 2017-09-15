@@ -6,15 +6,216 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.53743,
-          53.23437
+            -122.353726,
+            47.620699
         ]
       },
       "properties": {
-        "name": "Cathedral",
-        "description": "One of Europeâ€™s finest Gothic buildings, once the tallest building in the world that dominates Lincoln's skyline.",
-        "icon": "/static/images/icons/map-marker-do.png"
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
       }
-    }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -125.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -122.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -122.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -122.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -122.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -122.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -122.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -122.353726,
+            47.620699
+        ]
+      },
+      "properties": {
+        "icon":"",
+        "locationName":"Sketch Porter Potty",
+        "location":{"lat":47.620699,"lng":-122.353726},
+        "overallQuality":"4",
+        "tpQuality":"2",
+        "usage":"Free",
+        "occupancy":"",
+        "genderNeutral":"",
+        "soap":"Gel",
+        "drying":"Paper Towel",
+        "comments":""
+
+      }
+    },
   ]
 }
