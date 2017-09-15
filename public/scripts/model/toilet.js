@@ -28,7 +28,7 @@ var app = app || {};
       .then(results => {
         Toilet.loadAll(results);
       })
-      .then(callback());
+      .then(callback);
   };
 
 
