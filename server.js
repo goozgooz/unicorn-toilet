@@ -7,7 +7,9 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-const conString = process.env.DATABASE_URL || 'postgres://DaltonCarr@localhost:5432/toilets'
+
+const conString = process.env.DATABASE_URL || 'postgres://ashkaan@localhost:5432/toilets'
+
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.log(err));
@@ -96,6 +98,10 @@ app.post('/toilets', function(request, response){
         response.send('insert complete');
       });
   }
+});
+
+app.get('/*', function(there, backAgain) {
+  backAgain.sendFile('index.html', {root: './public'});
 });
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
