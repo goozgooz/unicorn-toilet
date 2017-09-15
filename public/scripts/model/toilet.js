@@ -40,7 +40,6 @@ var app = app || {};
   Toilet.fetchData = function(callback){
     $.get('/toilets')
       .then(results => {
-        console.log(results);
         Toilet.loadAll(results);
       })
       .then(callback);
