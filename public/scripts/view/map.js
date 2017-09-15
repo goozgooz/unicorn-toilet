@@ -60,7 +60,7 @@ function initMap() {
           map: map,
         });
   var script = document.createElement('script');
-  script.src='https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
+  script.src='../../data/toiletsRawData.json';
   document.getElementsByTagName('head')[0].appendChild(script);
 
   centerControlDiv.index = 1;
