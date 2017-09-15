@@ -59,9 +59,7 @@ function initMap() {
           position: codefellows,
           map: map,
         });
-  var script = document.createElement('script');
-  script.src='../../data/toiletsRawData.json';
-  document.getElementsByTagName('head')[0].appendChild(script);
+  map.data.loadGeoJson('../../data/demo.json');
 
   centerControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
@@ -80,6 +78,7 @@ window.eqfeed_callback = function(results) {
 
 function loadMarkers(){
   app.Toilet.all.forEach(toilet => toilet.info());
+  app.Toilet.all.forEach(toilet => toilet.geocode());
   app.Toilet.all.forEach(toilet => addMarker(toilet));
 }
 
