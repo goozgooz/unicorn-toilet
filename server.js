@@ -98,4 +98,8 @@ app.post('/toilets', function(request, response){
   }
 });
 
+app.get('/*', function(there, backAgain) {
+  backAgain.sendFile('index.html', {root: './public'});
+});
+
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
