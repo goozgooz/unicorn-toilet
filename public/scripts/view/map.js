@@ -63,9 +63,18 @@ function initMap() {
 
   centerControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
-}
 
-window.eqfeed_callback = function(results) {
+  var contentString = '<div id="content">'+
+     '<div id="siteNotice">'+
+     '</div>'+
+     '<h1 id="firstHeading" class="firstHeading">Toilet!</h1>'+
+     '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+  content: contentString
+});
+
+window.toiletsJson = function(results) {
   for (var i = 0; i < results.features.length; i++) {
     var coords = results.features[i].geometry.coordinates;
     var latLng = new google.maps.LatLng(coords[1],coords[0]);
@@ -73,15 +82,23 @@ window.eqfeed_callback = function(results) {
       position: latLng,
       map: map
     });
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
   }
 }
 
-function loadMarkers(){
-  app.Toilet.all.forEach(toilet => toilet.info());
-  app.Toilet.all.forEach(toilet => toilet.geocode());
-  app.Toilet.all.forEach(toilet => addMarker(toilet));
-}
+// function loadMarkers(){
+//   app.Toilet.all.forEach(toilet => toilet.info());
+//   app.Toilet.all.forEach(toilet => toilet.geocode());
+//   app.Toilet.all.forEach(toilet => addMarker(toilet));
+// }
 
-function initIndexPage(){
-  app.Toilet.fetchData(loadMarkers);
+// function initIndexPage(){
+//   app.Toilet.fetchData(loadMarkers);
+// }
+  marker.addListener('click', function() {
+    console.log('click event');
+  infowindow.open(map, marker);
+  });
 }
