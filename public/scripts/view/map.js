@@ -78,11 +78,38 @@ window.eqfeed_callback = function(results) {
   }
 }
 
+function addMarker(toilet){
+  console.log('yo');
+  console.log(toilet);
+  var marker = new google.maps.Marker({
+        map: map,
+        position: toilet.geocode()
+      });
+}
+
+function addMarker(toilet){
+  console.log(toilet);
+  var address = toilet.location;
+  geocoder.geocode({'location': toilet.geocode()}, function(results, status){
+    console.log(results)
+    if(status === 'OK'){
+      // map.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: map,
+        position: toilet.geocode()
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
+
 function loadMarkers(){
   app.Toilet.all.forEach(toilet => toilet.info());
   app.Toilet.all.forEach(toilet => addMarker(toilet));
 }
 
 function initIndexPage(){
+  console.log('hi');
   app.Toilet.fetchData(loadMarkers);
 }

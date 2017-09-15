@@ -20,7 +20,7 @@ var app = app || {};
       }
     })
     .then(function(res){
-      console.log(res.data.results[0].geometry.location);
+      return (res.data.results[0].geometry.location);
     })
     .catch(function(err){
       console.log(err);
