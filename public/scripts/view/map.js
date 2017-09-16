@@ -89,7 +89,6 @@ function addMarker(coords, toilet){
     content: `<h3>${toilet.location}</h3>
               <h4>Overall Quality: ${toilet.overallQuality}</h4>
               <h4>TP Quality: ${toilet.tpQuality}</h4>
-              <h4>Overall Quality: ${toilet.overallQuality}</h4>
               <h4>Free To Use or Pay: ${toilet.usage}</h4>
               <h4>Single or Multiple occupancy: ${toilet.occupancy}</h4>
               <h4>Gender Neutral Friendly: ${toilet.genderNeutral}</h4>
