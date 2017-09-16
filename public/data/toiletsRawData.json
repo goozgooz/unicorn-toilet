@@ -373,66 +373,38 @@
   },
   {
     "locationName":"Burke-Gilman Playground Park",
-
     "location":"5201 Sand Point Way NE, Seattle, WA 98105",
-
     "overallQuality":"",
-
     "tpQuality":"",
-
     "usage":"Free",
-
     "occupancy":"",
-
     "genderNeutral":"",
-
     "soap":"",
-
     "drying":"",
-
     "comments":""
   },
   {
     "locationName":"Golden Gardens Bathhouse",
-
     "location":"8498 Seaview Pl NW, Seattle, WA 98117",
-
     "overallQuality":"",
-
     "tpQuality":"",
-
     "usage":"Free",
-
     "occupancy":"",
-
     "genderNeutral":"",
-
     "soap":"",
-
     "drying":"",
-
     "comments":""
   },
   {
     "locationName":"View Ridge Playfield",
-
     "location":"4408 NE 70th St, Seattle, WA 98115",
-
     "overallQuality":"",
-
     "tpQuality":"",
-
     "usage":"Free",
-
     "occupancy":"",
-
     "genderNeutral":"",
-
     "soap":"",
-
     "drying":"",
-
-
     "comments":""
   },
   {
@@ -453,7 +425,7 @@
     "overallQuality":"",
     "tpQuality":"",
     "usage":"",
-    "occupancy":"",
+    "occupancy":"",Public Park Restroom
     "genderNeutral":"",
     "soap":"",
     "drying":"",
@@ -556,8 +528,32 @@
     "comments":"Matthews Beach park"
   },
   {
-    "locationName":"",
-    "location":"8603 FAUNTLEROY WAY SW",
+    "locationName":"Lincoln Park",
+    "location":{"lat":47.526959, "lng":-122.395495},
+    "overallQuality":"",
+    "tpQuality":"",
+    "usage":"Free",
+    "occupancy":"",
+    "genderNeutral":"",
+    "soap":"",
+    "drying":"",
+    "comments":"Public Park Restroom"
+  },
+  {
+    "locationName":"Seward Park",
+    "location":{"lat":47.549644, "lng":-122.256376},
+    "overallQuality":"",
+    "tpQuality":"",
+    "usage":"Free",
+    "occupancy":"Multiple",
+    "genderNeutral":"No",
+    "soap":"",
+    "drying":"",
+    "comments":"Public Park Restroom"
+  },
+  {
+    "locationName":"University Village",
+    "location":{"lat":47.66147222222222, "lng":-122.29947222222222},
     "overallQuality":"",
     "tpQuality":"",
     "usage":"",
@@ -568,8 +564,32 @@
     "comments":""
   },
   {
-    "locationName":"",
-    "location":"5018 LAKE WASHINGTON BLVD S",
+    "locationName":"David Rodgers Park",
+    "location":{"lat":47.64502777777778, "lng":-122.36058333333333},
+    "overallQuality":"",
+    "tpQuality":"",
+    "usage":"Free",
+    "occupancy":"Multiple",
+    "genderNeutral":"No",
+    "soap":"",
+    "drying":"",
+    "comments":"Public Park Restroom"
+  },
+  {
+    "locationName":"Bitter Lake Playfield",
+    "location":{"lat":47.72361111111111, "lng":-122.34897222222222},
+    "overallQuality":"",
+    "tpQuality":"",
+    "usage":"Free",
+    "occupancy":"Multiple",
+    "genderNeutral":"No",
+    "soap":"",
+    "drying":"",
+    "comments":"Public Park Restroom"
+  },
+  {
+    "locationName":"Medgar Evers Pool",
+    "location":"500 23rd Ave, Seattle, WA 98122",
     "overallQuality":"",
     "tpQuality":"",
     "usage":"",
@@ -577,71 +597,11 @@
     "genderNeutral":"",
     "soap":"",
     "drying":"",
-    "comments":""
+    "comments":"Skate Park/Pool"
   },
   {
-    "locationName":"",
-    "location":"2520 NE UNIVERSITY VILLAGE ST",
-    "overallQuality":"",
-    "tpQuality":"",
-    "usage":"",
-    "occupancy":"",
-    "genderNeutral":"",
-    "soap":"",
-    "drying":"",
-    "comments":"univ. village ANTHROPOLOGIE brn 1 stry, wood trm"
-  },
-  {
-    "locationName":"",
-    "location":"2800 1ST AVE W",
-    "overallQuality":"",
-    "tpQuality":"",
-    "usage":"",
-    "occupancy":"",
-    "genderNeutral":"",
-    "soap":"",
-    "drying":"",
-    "comments":"David Rodgers Park"
-  },
-  {
-    "locationName":"",
-    "location":"13200 AURORA AVE N",
-    "overallQuality":"",
-    "tpQuality":"",
-    "usage":"",
-    "occupancy":"",
-    "genderNeutral":"",
-    "soap":"",
-    "drying":"",
-    "comments":""
-  },
-  {
-    "locationName":"",
-    "location":"500 23RD AVE",
-    "overallQuality":"",
-    "tpQuality":"",
-    "usage":"",
-    "occupancy":"",
-    "genderNeutral":"",
-    "soap":"",
-    "drying":"",
-    "comments":"SKATE PARK"
-  },
-  {
-    "locationName":"",
-    "location":"1660 HARBOR AVE SW",
-    "overallQuality":"",
-    "tpQuality":"",
-    "usage":"",
-    "occupancy":"",
-    "genderNeutral":"",
-    "soap":"",
-    "drying":"",
-    "comments":"ALKI CRAB & FISH COMPANY, 1 stry, brwn, cream/grn trim"
-  },
-  {
-    "locationName":"",
-    "location":"2301 LAKE WASHINGTON BLVD S",
+    "locationName":"Mount Baker Beach",
+    "location":{"lat":47.58311111111111, "lng":-122.28736111111111},
     "overallQuality":"",
     "tpQuality":"",
     "usage":"",
@@ -652,8 +612,20 @@
     "comments":"MT BAKER PARK BEACHHOUSE/RESTROOMS grn 1 stry"
   },
   {
-    "locationName":"",
-    "location":"1141 ALKI AVE SW",
+    "locationName":"Alki Beach Park Restroom",
+    "location":{"lat":47.57858333333333, "lng":-122.41305555555556},
+    "overallQuality":"",
+    "tpQuality":"",
+    "usage":"Free",
+    "occupancy":"Single",
+    "genderNeutral":"Yes",
+    "soap":"",
+    "drying":"",
+    "comments":"Public Park Restroom"
+  },
+  {
+    "locationName":"Daybreak Star Indian Cultural Center",
+    "location":"5011 Bernie Whitebear Way, Seattle, WA 98199",
     "overallQuality":"",
     "tpQuality":"",
     "usage":"",
@@ -664,52 +636,28 @@
     "comments":""
   },
   {
-    "locationName":"",
-    "location":"5011 BERNIE WHITEBEAR WAY",
+    "locationName":"Volunteer Park",
+    "location":"1247 15th Ave E, Seattle, WA 98112",
     "overallQuality":"",
     "tpQuality":"",
-    "usage":"",
-    "occupancy":"",
-    "genderNeutral":"",
+    "usage":"Free",
+    "occupancy":"Multiple",
+    "genderNeutral":"No",
     "soap":"",
     "drying":"",
-    "comments":"Daybreak Star Indian Cultural Center; AA update"
+    "comments":"Public Park Restroom"
   },
   {
-    "locationName":"",
-    "location":"1400 E PROSPECT ST",
+    "locationName":"Westcrest Park",
+    "location":"9000 8th Ave SW, Seattle, WA 98106",
     "overallQuality":"",
     "tpQuality":"",
-    "usage":"",
-    "occupancy":"",
-    "genderNeutral":"",
+    "usage":"Free",
+    "occupancy":"Multiple",
+    "genderNeutral":"No",
     "soap":"",
     "drying":"",
-    "comments":""
-  },
-  {
-    "locationName":"",
-    "location":"9000 8TH AVE SW",
-    "overallQuality":"",
-    "tpQuality":"",
-    "usage":"",
-    "occupancy":"",
-    "genderNeutral":"",
-    "soap":"",
-    "drying":"",
-    "comments":"Geocoded - IMAP"
-  },
-  {
-    "locationName":"",
-    "location":"9000 8TH AVE SW",
-    "overallQuality":"",
-    "tpQuality":"",
-    "usage":"",
-    "occupancy":"",
-    "genderNeutral":"",
-    "soap":"",
-    "drying":"",
-    "comments":"Geocoded - IMAP"
+    "comments":"Public Park Restroom"
   },
   {
     "locationName":"Pike Place Market",
@@ -795,16 +743,4 @@
     "drying":"",
     "comments":"Public Park Restroom"
   },
-  {
-    "locationName":"",
-    "location":"",
-    "overallQuality":"",
-    "tpQuality":"",
-    "usage":"",
-    "occupancy":"",
-    "genderNeutral":"",
-    "soap":"",
-    "drying":"",
-    "comments":""
-  }
 ]
