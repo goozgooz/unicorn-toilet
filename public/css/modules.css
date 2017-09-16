@@ -144,6 +144,14 @@ body {
   background-color:#A874D4;
   display:inline-block;
 }
+.bars2 {
+  width: 22%;
+  height:auto;
+  padding-left: 8px;
+  padding-right: 10px;
+  background-color:#FF988E;
+  display:inline-block;
+}
 iframe{
 }
 
