@@ -81,7 +81,8 @@ window.eqfeed_callback = function(results) {
 function addMarker(coords, toilet){
   var marker = new google.maps.Marker({
         map: map,
-        position: coords
+        position: coords,
+        icon: "/css/images/rainbowShit.png"
       });
   var infoWindow = new google.maps.InfoWindow({
     content: `<h3>${toilet.location}</h3>
