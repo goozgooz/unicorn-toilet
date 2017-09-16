@@ -138,8 +138,8 @@ body {
 .bars {
   width: 22%;
   height:auto;
-  padding-left: 3px;
-  padding-right: 5px;
+  padding-left: 8px;
+  padding-right: 10px;
   background-color:#A874D4;
   display:inline-block;
 }
