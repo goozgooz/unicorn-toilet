@@ -130,18 +130,20 @@ body {
 
 .bored-main{
   width: 80%;
-  height: 800px;
+  height:auto;
   background-color: #F6EFFF;
   margin: 0 auto;
+  margin-top:100px;
 }
 .bars {
   width: 22%;
-  height:800px;
-  padding-left: 5px;
+  height:auto;
+  padding-left: 3px;
   padding-right: 5px;
   background-color:#A874D4;
   display:inline-block;
-  #A874D4
+}
+iframe{
 }
 
 @media screen and (max-width: 500px) {
