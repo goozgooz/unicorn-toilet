@@ -743,4 +743,16 @@
     "drying":"",
     "comments":"Public Park Restroom"
   },
+  {
+    "locationName":"Columbia Center, 40th Floor",
+    "location":{"lat":47.604703, "lng":-122.330491},
+    "overallQuality":"",
+    "tpQuality":"",
+    "usage":"Free",
+    "occupancy":"Multiple",
+    "genderNeutral":"No",
+    "soap":"",
+    "drying":"",
+    "comments":"Great views!!!"
+  },
 ]
