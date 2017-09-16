@@ -49,6 +49,7 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
     center: codefellows,
+    icon: "/css/images/code_fellows/png"
   });
 
   // Create the DIV to hold the control and call the CenterControl()
@@ -93,7 +94,8 @@ function addMarker(coords, toilet){
               <h4>Single or Multiple occupancy: ${toilet.occupancy}</h4>
               <h4>Gender Neutral Friendly: ${toilet.genderNeutral}</h4>
               <h4>Gel Soap or Foam Soap: ${toilet.soap}</h4>
-              <h4>Paper Towels or Air Dry: ${toilet.drying}</h4>`
+              <h4>Paper Towels or Air Dry: ${toilet.drying}</h4>
+              <h4>Comments: ${toilet.comments}</h4>`
   });
   marker.addListener('mouseover', function() {
     infoWindow.open(map, marker);
