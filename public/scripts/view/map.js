@@ -49,7 +49,6 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
     center: codefellows,
-    icon: "/css/images/code_fellows.png"
   });
 
   // Create the DIV to hold the control and call the CenterControl()
@@ -59,6 +58,7 @@ function initMap() {
   var marker = new google.maps.Marker({
           position: codefellows,
           map: map,
+          icon: "/css/images/code_fellows.png"
         });
   var script = document.createElement('script');
   script.src='../../data/toiletsRawData.json';
